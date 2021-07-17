@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio.com</title>
+    <link rel = "icon" href="images/j-logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ProgressBar/jquery.lineProgressbar.css">
+    <script src="ProgressBar/jquery-3.6.0.js"></script>
+    <script src="ProgressBar/jquery.lineProgressbar.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Scroll Up Arrow -->
+    <div class="up-arrow">
+        <a href="#home"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+    <!--Navbar Start -->
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="portfolio.html">Portfolio.</a></div>
+            <ul class="menu" id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="cancle" id="cancle"><i class="fa fa-times"></i></li>
+            </ul>
+            <div class="social" id="social">
+                <a href=""><i class="fa fa-facebook-f"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+            </div>
+            <i class="fa fa-bars" id="open"></i>
+        </div>
+    </nav>
+
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text">
+                <div class="text-one">Hello,</div>
+                <div class="text-two"><span class="animated flash">I,m Jugal Passi</span></div>
+                <div class="text-three">FullStack Developer</div>
+                <div class="text-four">From Punjab,Fazilka.</div>
+                <div class="button">
+                    <button type="button">Heir Me</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/jugal1.jpg">
+            </div>
+        </div>
+    </section>
+    <!-- About Section Start -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="title"><span>About Me</span></div>
+            <div class="about-details">
+                <div class="left">
+                    <img src="images/jugal3.jpg" alt="">
+                </div>
+                <div class="right">
+                    <div class="topic">I'm a Creative<br><span class="web-d">Web-Designer.</span></div>
+                    <div class="my-details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem
+                            voluptatibus, placeat nam eaque excepturi sint maiores neque porro numquam, quod quo,
+                            quisquam quam fugit adipisci reiciendis doloribus eveniet. Recusandae vero aliquam sunt non
+                            reprehenderit natus, mollitia cumque adipisci voluptatem laudantium consectetur quam
+                            possimus culpa!</p>
+                    </div>
+                    <div class="button">
+                        <button type="button" id="download">Download CV</button>
+                        <a href="JugalResume.doc" id="myLink" style="display: none;">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section Start -->
+    <section class="skills" id="skills">
+        <div class="skills-content">
+            <div class="title"><span>My Skills</span></div>
+            <div class="skill-details">
+                <div class="left">
+                    <div class="topic">Skills Reflect Our <br><span class="kedg">Knowledge</span></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi atque sapiente cum minus in quo.
+                        Laboriosam quia officiis, tempore inventore vero deleniti dolores iure facere est illo repellat
+                        provident deserunt explicabo repudiandae illum asperiores mollitia.</p>
+                    <div class="exp-div">
+                        <div class="exp">2</div>
+                        <div class="period">years<br>of Experience</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="html">
+                        <div class="image"><img src="images/html-logo.png" width="80px"></div>
+                        <div line-progressbar data-progress-color="#e67e22" data-height="20px" id="html"
+                            class="html-bar"></div>
+                    </div>
+                    <div class="css">
+                        <div class="image"><img src="images/css-logo.png" width="80px"></div>
+                        <div line-progressbar data-progress-color="#e67e22" data-height="20px" id="css" class="css-bar">
+                        </div>
+                    </div>
+                    <div class="javascript">
+                        <div class="image"><img src="images/javascript-logo1.jpg" width="73px"></div>
+                        <div line-progressbar data-progress-color="#e67e22" data-height="20px" id="javascript"
+                            class="js-bar"></div>
+                    </div>
+                    <div class="php">
+                        <div class="image"><img src="images/php-logo.png" width="87px"></div>
+                        <div line-progressbar data-progress-color="#e67e22" data-height="20px" id="php" class="php-bar">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section Start -->
+
+    <section class="services" id="services">
+        <div class="services-content">
+            <div class="title"><span>Services</span></div>
+            <div class="services-details">
+                <div class="row1">
+                    <div class="box">
+                        <div class="image"><img src="images/web-designing-logo.png" alt=""></div>
+                        <div class="heading">Web Development</div>
+                        <div class="topic">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic veniam ratione? Adipisci
+                                at
+                                incidunt ab, voluptas rem ipsum, autem labore corrupti nihil sequi esse!</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image"><img src="images/android_os_logo_icon_134673.png" alt=""></div>
+                        <div class="heading">APP Development</div>
+                        <div class="topic">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic veniam ratione? Adipisci
+                                at
+                                incidunt ab, voluptas rem ipsum, autem labore corrupti nihil sequi esse!</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image"><img src="images/photoshop-logo.png" alt=""></div>
+                        <div class="heading">Photoshop</div>
+                        <div class="topic">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic veniam ratione? Adipisci
+                                at
+                                incidunt ab, voluptas rem ipsum, autem labore corrupti nihil sequi esse!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row2">
+                    <div class="box">
+                        <div class="image"><img src="images/graphic-designing-logo.png" alt=""></div>
+                        <div class="heading">Graphic Designing</div>
+                        <div class="topic">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic veniam ratione? Adipisci
+                                at
+                                incidunt ab, voluptas rem ipsum, autem labore corrupti nihil sequi esse!</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image"><img src="images/icon-designing.jpg" alt=""></div>
+                        <div class="heading">Icon Designing</div>
+                        <div class="topic">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic veniam ratione? Adipisci
+                                at
+                                incidunt ab, voluptas rem ipsum, autem labore corrupti nihil sequi esse!</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image"><img src="images/icon-designing-logo.png" alt=""></div>
+                        <div class="heading">DBMS</div>
+                        <div class="topic">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic veniam ratione? Adipisci
+                                at
+                                incidunt ab, voluptas rem ipsum, autem labore corrupti nihil sequi esse!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="title"><span>Contact Me</span></div>
+            <div class="contact-details">
+                <h1>Jugalpassi76925@gmail.com</h1>
+                <h2>+91 8360569533</h2>
+                <h3>Have any project ?</h3>
+            </div>
+            <div class="button">
+                <button>Let's Chat</button>
+            </div>
+        </div>
+    </section>
+    <footer class="owner">
+        <span class="text">Created By Jugal | © 2021 Copyright All Rights Reserverd</span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

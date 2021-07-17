@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+html,body{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: #fff;
+}
+body::-webkit-scrollbar-track{
+    /* width: 20px; */
+    background-color: #0E2431;
+}
+body::-webkit-scrollbar-thumb{
+    width: 20px;
+    /* border-radius: 10px; */
+    background-color: rgb(33, 203, 226);
+}
+
+/* Up Arrow */
+.up-arrow{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    box-shadow: 0 0 8px black;
+    background-color: rgb(33, 203, 226);
+    padding: 7px 12px;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.upactive{
+    opacity: 1;
+    pointer-events: auto;
+}
+.up-arrow i{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+}
+/* Navbar CSS */
+nav{
+    width: 100%;
+    background-color: #07131a;
+    position: fixed;
+    transition: all 0.3s ease;
+    top: 0;
+}
+nav.activate{
+    /* position: sticky; */
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 5px black;
+    /* top: 0; */
+}
+nav .navbar{
+    width: 90%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .navbar .logo a{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(33, 203, 226);
+}
+/* nav .navbar .logo a.navactive{
+    
+} */
+nav .navbar .menu{
+    display: flex;
+    /* align-items: center;
+    justify-content: space-between; */
+}
+nav .navbar .menu li{
+    margin: 0 12px;
+}
+nav .navbar .menu li a{
+    text-align: center;
+    color: #fff;
+    font-size: 19px;
+    transition: all 0.3s ease;
+}
+nav .navbar .menu.activate li a{
+    color: #0E2431;
+}
+nav .navbar .menu li a:hover{
+    color: rgb(33, 203, 226);
+}
+nav .navbar .menu.activate li a:hover{
+    color: rgb(33, 203, 226);
+}
+nav .navbar .menu .cancle{
+    display: none;
+}
+nav .navbar .social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .navbar .social a{
+    text-align: center;
+    color: #fff;
+    margin: 0 5px;
+    font-size: 20px;
+}
+nav .navbar .social.activate a{
+    color: #0E2431;
+}
+
+nav .navbar .social a:hover{
+    color: rgb(33, 203, 226);
+}
+nav .navbar .fa.fa-bars{
+        color: #fff;
+        font-size: 27px;
+        cursor: pointer;
+        display: none;
+}
+
+@media (max-width:750px){
+    nav .navbar .menu{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        background-color: #0E2431;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        transition: all 0.5s ease;
+    }
+    nav .navbar .menu.activate li a{
+        color: #ececec;
+    }
+    nav .navbar .menu.active{
+        left: 0;
+    }
+    nav .navbar .menu li{
+        display: block;
+        margin-top: 18px;
+    }
+    nav .navbar .menu .cancle{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+    }
+    nav .navbar .menu .cancle .fa.fa-times{
+        color: #fff;
+        font-size: 27px;
+        cursor: pointer;
+    }
+    nav .social, nav .social a{
+        display: none;
+    }
+    nav .navbar .fa.fa-bars{
+        display: block;
+    }
+    nav .navbar .fa.fa-bars.activate{
+        color: #0E2431;
+    }
+}
+
+/* Home Section CSS */
+
+.home{
+    width: 100%;
+    height: auto;
+}
+.home .home-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 80px;
+}
+.home .home-content .text .text-one{
+    font-size: 28px;
+    font-weight: 600;
+}
+.home .home-content .text .text-two{
+    font-size: 88px;
+    font-weight: 600;
+    color: rgb(33, 203, 226);
+    text-shadow: 3px 2px 3px black;
+}
+.home .home-content .text .text-three{
+    font-size: 48px;
+    font-weight: 500;
+}
+.home .home-content .text .text-four{
+    font-size: 25px;
+    font-weight: 550;
+}
+.home .home-content .text .button{
+    margin: 20px 0;
+}
+.home .home-content .text .button button{
+    font-size: 19px;
+    font-weight: 600;
+    padding: 15px 25px;
+    color: #fff;
+    background-color: rgb(33, 203, 226);
+    border: 3px solid rgb(33, 203, 226);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.home .home-content .text .button button:hover{
+    background-color: transparent;
+    border: 3px solid rgb(33, 203, 226);
+    color: #0E2431;
+}
+.home .home-content .image img{
+    width: 600px;
+}
+
+/* About Section CSS */
+
+.about{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(237, 249, 253);
+}
+.about .about-content{
+    margin: auto;
+    padding-top: 100px;
+}
+.about .about-content .title{
+    margin:  auto;
+    text-align: center;
+    color: #0E2431;
+    font-size: 32px;
+    font-weight: 600;
+    border-bottom: 4px solid #0E2431;
+    width: 160px;
+}
+.about .about-details{
+    width: 90%;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about-details .left img{
+    width: 400px;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+.about .about-details .right{
+    width: 450px;
+    margin: 0 20px;
+}
+.about .about-details .right .topic{
+    font-size: 45px;
+    font-weight: 600;
+}
+.about .about-details .right .topic .web-d{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(33, 203, 226);
+}
+.about .about-details .right .my-details p{
+    font-size: 17px;
+    font-weight: 550;
+}
+.about .about-details .right .button{
+    margin: 20px 0;
+}
+.about .about-details .right .button button{
+    font-size: 19px;
+    font-weight: 600;
+    padding: 15px 25px;
+    color: #0E2431;
+    background-color: transparent;
+    border: 3px solid rgb(33, 203, 226);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.about .about-details .right .button button:hover{
+    
+    background-color: rgb(33, 203, 226);
+    border: 3px solid rgb(33, 203, 226);
+    color: #fff;
+}
+
+/* Skills Section CSS */
+
+.skills{
+    width: 100%;
+    height: auto;
+    padding: 80px;
+}
+
+.skills .skills-content .title{
+    margin:  auto;
+    text-align: center;
+    color: #0E2431;
+    font-size: 32px;
+    font-weight: 600;
+    border-bottom: 4px solid #0E2431;
+    width: 150px;
+}
+.skills .skills-content .skill-details{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.skills .skills-content .skill-details .left .topic{
+    font-size: 40px;
+    font-weight: 600;   
+}
+.skills .skills-content .skill-details .left p{
+    font-size: 19px;
+    font-weight: 550;
+
+}
+.skills .skills-content .skill-details .left .topic .kedg{
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(33, 203, 226);  
+}
+
+.skills .skills-content .skill-details .left .exp-div{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 230px;
+}
+
+.skills .skills-content .skill-details .left .exp-div .exp{
+    font-size: 100px;
+    font-weight: 600;
+    color: rgb(33, 203, 226);
+}
+.skills .skills-content .skill-details .left .exp-div .period{
+    font-size: 26px;
+    font-weight: 600;
+}
+.skills .skills-content .skill-details .left{
+    width: 450px;
+}
+.skills .skills-content .skill-details .right{
+    width: 450px;
+}
+.skills .skills-content .skill-details .right .html{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .skill-details .right .html .html-bar{
+    width: 80%;
+    z-index: -1;
+}
+.skills .skills-content .skill-details .right .css{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .skill-details .right .css .css-bar{
+    width: 80%;
+    z-index: -1;
+}
+.skills .skills-content .skill-details .right .javascript{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .skill-details .right .javascript .js-bar{
+    width: 80%;
+    z-index: -1;
+}
+
+
+.skills .skills-content .skill-details .right .php{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .skill-details .right .php .php-bar{
+    width: 80%;
+    z-index: -1;
+}
+
+/* Services Section CSS */
+
+.services{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(204, 255, 219);
+}
+.services .services-content{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+}
+.services .services-content .title{
+    margin:  auto;
+    text-align: center;
+    color: #0E2431;
+    font-size: 32px;
+    font-weight: 600;
+    border-bottom: 4px solid #0E2431;
+    width: 150px;
+}
+.services .services-content .services-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services .services-content .services-details .row1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.services .services-content .services-details .row2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.services .services-content .services-details .box{
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px black;
+    margin: 10px;
+    border-radius: 20px;
+    transition:  all 0.4s ease;
+    cursor: pointer;
+}
+.services .services-content .services-details .box:hover{
+    background-color: rgb(33, 203, 226);
+    color: #fff;
+}
+.services .services-content .services-details .box .image{
+    width: auto;
+    margin: auto;
+
+}
+.services .services-content .services-details .box .image img{
+    width: 60px;
+    border-radius: 50px;
+}
+.services .services-content .services-details .box .heading{
+    font-size: 25px;
+    font-weight: 600;
+}
+.services .services-content .services-details .box .topic{
+    width: 100%;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Contact Section CSS */
+
+.contact{
+    height: 100vh;
+    width: 100%;
+    padding-top: 80px;
+}
+.contact .contact-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.contact .contact-content .title{
+    margin:  auto;
+    text-align: center;
+    color: #0E2431;
+    font-size: 32px;
+    font-weight: 600;
+    border-bottom: 4px solid #0E2431;
+    width: 220px;
+}
+.contact .contact-content .contact-details{
+    padding: 50px 0;
+}
+.contact .contact-content .contact-details h1{
+    font-size: 65px;
+    text-align: center;
+}
+.contact .contact-content .contact-details h2{
+    font-size: 45px;
+    text-align: center;
+}
+.contact .contact-content .contact-details h3{
+    font-size: 25px;
+    text-align: center;
+}
+.contact .contact-content .button button{
+    font-size: 19px;
+    font-weight: 600;
+    padding: 15px 25px;
+    color: #fff;
+    background-color: rgb(33, 203, 226);
+    border: 3px solid rgb(33, 203, 226);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.contact .contact-content .button button:hover{
+    background-color: transparent;
+    border: 3px solid rgb(33, 203, 226);
+    color: #0E2431;
+}
+
+.owner{
+    width:100%;
+    height: 40px;
+    background-color: rgb(33, 203, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.owner .text{
+    font-weight: 600;
+}
+
+
+@media(max-width:1425px){
+    .services .services-content .services-details .box{
+        width: 400px;
+    }
+}
+
+
+@media(max-width:1346px)
+{
+    .home .home-content .image img{
+        width: 600px;
+    }
+    .home .home-content .text .text-two{
+        font-size: 58px;
+        font-weight: 600;
+    }
+    .home .home-content .text .text-three{
+        font-size: 38px;
+        font-weight: 500;
+    }
+    .services{
+        height: auto;
+    }
+    .services .services-content .services-details .box{
+        width: 350px;
+    }
+}
+
+@media(max-width:1117px)
+{
+    .home .home-content .image img{
+        width: 400px;
+    }
+    .home .home-content .text .text-two{
+        font-size: 48px;
+        font-weight: 600;
+    }
+    .home .home-content .text .text-three{
+        font-size: 32px;
+        font-weight: 500;
+    }
+    .home .home-content .text .text-four{
+        font-size: 21px;
+        font-weight: 600;
+    }
+    .about .about-details .left img{
+        width: 300px;
+    }
+    .about .about-details .right{
+        width: 500px;
+    }
+    .about .about-details .right .topic{
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .about .about-details .right .topic .web-d{
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(33, 203, 226);
+    }
+    .skills .skills-content .skill-details .left{
+        width: 350px;
+    }
+    .skills .skills-content .skill-details .right{
+        width: 400px;
+    }
+    .services .services-content .services-details .box{
+        width: 340px;
+        margin: 5px;
+        padding: 10px;
+    }
+    .services .services-content .services-details .box .heading{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .contact .contact-content .contact-details h1{
+        font-size: 45px;
+        margin: 20px 0;
+    }
+    .contact .contact-content .contact-details h2{
+        font-size: 32px;
+    }
+}
+
+@media(max-width:1085px){
+    
+    .services .services-content{
+        width: 90%;
+    }
+    .services .services-content .services-details{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .services .services-content .services-details .row1{
+        flex-direction: column;
+        width: 90%;
+        margin-right: 5px;
+    }
+    .services .services-content .services-details .row1 .box{
+        width: 100%;
+    }
+    .services .services-content .services-details .row2{
+        flex-direction: column;
+        width: 90%;
+        margin-left: 5px;
+    }
+    .services .services-content .services-details .row2 .box{
+        width: 100%;
+    }
+
+    .services .services-content .services-details .box .image img{
+        width: 40px;
+    }
+}
+
+
+@media(max-width:770px)
+{
+    .home .home-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .home-content .text{
+        margin: 30px 0;
+    }
+    .home .home-content .text .text-two{
+        font-size: 62px;
+        font-weight: 600;
+    }
+    .home .home-content .text .text-three{
+        font-size: 48px;
+        font-weight: 500;
+    }
+    .home .home-content .image img{
+        width: 100%;
+        margin: 10px auto;
+        text-align: center;
+        padding: 30px;
+    }
+    .about{
+        height: auto;
+    }
+    .about .about-details{
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+    }
+    .about .about-details .right{
+        
+        margin: 30px auto;
+    }
+    
+    .skills{
+        height: auto;
+    }
+    .skills .skills-content .skill-details{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .skills .skills-content .skill-details .left{
+        width: 350px;
+        margin: auto;
+        text-align: center;
+    }
+    .skills .skills-content .skill-details .right{
+        width: 500px;
+    }
+    .skills .skills-content .skill-details .left .exp-div{
+        align-items: center;
+        margin: auto;
+    }
+    .skills .skills-content .skill-details .left .exp-div .period{
+        text-align: left;
+    }
+    .services .services-content .services-details .box .topic{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    .contact .contact-content .contact-details h1{
+        font-size: 35px;
+        margin: 20px 0;
+    }
+    .contact .contact-content .contact-details h2{
+        font-size: 27px;
+    }
+}
+@media (max-width:520px){
+    .services .services-content .services-details .row1 .box{
+        height: 300px;
+    }
+    .services .services-content .services-details .row2 .box{
+        height :300px;
+    }
+    .contact .contact-content .contact-details h1{
+        font-size: 28px;
+    }
+    .owner .text{
+        font-size: 12px;
+    }
+}
+@media (max-width:536px){
+
+    .about .about-details .right{
+        width: 380px;
+    }
+    .home .home-content .text .button button{
+        font-size: 17px;
+        font-weight: 600;
+        padding: 10px 20px;
+    }
+    .about .about-details .right .button button{
+        font-size: 17px;
+        font-weight: 600;
+        padding: 10px 20px;
+    }
+    .skills .skills-content{
+        text-align: center;
+    }
+    .skills .skills-content .skill-details .left{
+        width: 300px;
+    }
+    
+    .skills .skills-content .skill-details .right{
+        width: 400px;
+    }
+    .skills .skills-content .skill-details .left .topic{
+        margin: auto;
+        text-align: center;
+    }
+    .skills .skills-content .skill-details .right{
+        justify-content: space-around;
+    }
+    .skills .skills-content .skill-details .right .html .html-bar{
+        width: 60%;
+    }
+    .skills .skills-content .skill-details .right .css .css-bar{
+        width: 60%;
+    }
+    .skills .skills-content .skill-details .right .php .php-bar{
+        width: 60%;
+    }
+    .skills .skills-content .skill-details .right .javascript .js-bar{
+        width: 60%;
+    }
+    
+}
+@media (max-width:450px){
+    .about .about-details .left{
+        width: 100%;
+        margin: auto;
+    }
+    .about .about-details .right{
+        width: 335px;
+        margin: auto;
+    }
+    .skills .skills-content .skill-details .left{
+        width: 280px;
+    }
+    .skills .skills-content .skill-details .right{
+        width: 350px;
+    }
+    .contact .contact-content .contact-details h1{
+        font-size: 23px;
+    }
+}
+@media (max-width:281px){
+    .about .about-details .left img{
+        width: 270px;
+    }
+    .about .about-details .right{
+        width: 260px;
+        text-align: justify;
+    }
+}
+@media (max-width:480px)
+{
+    .home .home-content .text .text-one{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .home .home-content .text .text-two{
+        font-size: 42px;
+        font-weight: 600;
+    }
+    .home .home-content .text .text-three{
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .home .home-content .text .text-four{
+        font-size: 19px;
+        font-weight: 550;
+    }
+}
