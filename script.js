@@ -7,7 +7,11 @@ let uparrow = document.querySelector(".up-arrow");
 let social = document.querySelector("#social");
 let download = document.querySelector("#download");
 let myLink = document.querySelector("#myLink");
+let loading = document.querySelector("#loading");
 
+function myload(){
+  loading.style.display='none';
+}
 show.addEventListener("click",function(){
     menu.classList.add("active");
     show.style.opacity="0";
