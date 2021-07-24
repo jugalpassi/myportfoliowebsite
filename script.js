@@ -9,9 +9,12 @@ let download = document.querySelector("#download");
 let myLink = document.querySelector("#myLink");
 let loading = document.querySelector("#loading");
 
-function myload(){
-  loading.style.display='none';
-}
+// function myload(){
+//   loading.style.display='none';
+// }
+setInterval(function(){
+loading.style.display='none'
+},3000)
 show.addEventListener("click",function(){
     menu.classList.add("active");
     show.style.opacity="0";
