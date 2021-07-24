@@ -14,7 +14,7 @@ let loading = document.querySelector("#loading");
 // }
 setInterval(function(){
 loading.style.display='none'
-},3000)
+},1900)
 show.addEventListener("click",function(){
     menu.classList.add("active");
     show.style.opacity="0";
